@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*,
+*::before,
+*::after {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* Button télécharger le PDF */
+a.btn-pdf {
+  background-color: hsl(60, 57%, 91%);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px hsla(0, 0%, 0%, 50%);
+  transition: 75ms ease;
+}
+
+a.btn-pdf:focus,
+a.btn-pdf:hover {
+  background-color: hsl(60, 57%, 85%);
+  box-shadow: none;
+}
+
+a.btn-pdf img {
+  width: 25px;
+}
+
+/* L'entête de la page (CV) */
+header {
+  background-color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 0%);
+  width: 65%;
+  padding: 15px;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  left: 17.5%;
+  right: 17.5%;
+}
+
+header h1 {
+  font-weight: bold;
+}
+
+header h1:not(.name) {
+  text-transform: uppercase;
+}
+
+header .name {
+  color: hsl(0, 0%, 50%);
+}
+
+/* Le contenu de la page (CV) */
+main {
+  display: flex;
+}
+
+/* Bande latérale de gauche */
+.left-sideband {
+  padding-inline: 30px;
+  padding-block-start: calc(100px + 50px * 2);
+  padding-block-end: 50px;
+  width: 50%;
+  background-color: hsl(60, 57%, 91%);
+}
+
+/* Les sections de la bande latérale de gauche */
+.left-sideband section {
+  padding-block-end: 25px;
+}
+
+.left-sideband section h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-block-end: 5px;
+}
+
+.left-sideband section ul {
+  list-style-type: none;
+}
+
+.left-sideband section ul li {
+  padding-top: 7px;
+}
+
+.left-sideband section ul li > .list-item-title {
+  font-weight: bold;
+}
+
+/* Section des informations personnelles (situant dans la bande latéral de gauche) */
+.left-sideband .personal-infos-section ul {
+  padding-left: 25px;
+}
+
+.left-sideband .personal-infos-section ul li:not(:first-child) {
+  padding-top: 5px;
+}
+
+/* Bande latérale de droite */
+.right-sideband {
+  padding-inline: 30px;
+  padding-block-start: calc(100px + 50px * 2);
+  padding-block-end: 50px;
+}
+
+/* Les sections de bande latérale de droite */
+.right-sideband section {
+  padding-block-end: 50px;
+}
+
+.right-sideband h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid black;
+  padding-block-end: 5px;
+}
+
+.right-sideband ul {
+  padding-left: 10px;
+}
+
+.right-sideband section ul li:not(:first-child) {
+  padding-top: 10px;
+}
+
+.right-sideband section ul li > .list-item-title,
+.right-sideband section ul li > .training-site,
+.right-sideband section ul li > .firm-name {
+  font-weight: bold;
+}
+
+.right-sideband section ul li > .skill-infos {
+  color: hsl(0, 0%, 30%);
+}
+
+.right-sideband section .line-wrapper {
+  margin-top: 12px;
+  border-left: 1px solid hsl(0, 0%, 0%);
+}
+
+/* La description de la bande latérale de droite */
+.right-sideband .about {
+  padding-bottom: 50px;
+}
+
+/* Les différents styles de puce à liste */
+ul > .email-marker {
+  list-style-image: url('./images/email.svg');
+}
+
+ul > .residence-marker {
+  list-style-image: url('./images/residence.svg');
+}
+
+ul > .birth-marker {
+  list-style-image: url('./images/birth.svg');
+}
+
+ul > .mobile-marker {
+  list-style-image: url('./images/mobile.svg');
+}
