@@ -11,32 +11,41 @@
   box-sizing: content-box;
 }
 
-/* Button télécharger le PDF */
-a.btn-pdf {
+/* Les boutons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1em;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+a.btn {
   background-color: hsl(60, 57%, 91%);
   border-radius: 5px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  top: 10px;
-  right: 10px;
   text-decoration: none;
   color: hsl(0, 0%, 0%);
   cursor: pointer;
   box-shadow: 0px 0px 5px 1px hsla(0, 0%, 0%, 50%);
   transition: 75ms ease;
+  width: fit-content;
 }
 
-a.btn-pdf:focus,
-a.btn-pdf:hover {
+a.btn:focus,
+a.btn:hover {
   background-color: hsl(60, 57%, 85%);
   box-shadow: none;
 }
 
-a.btn-pdf img {
+a.btn img {
   width: 25px;
+  margin-right: 0.25em;
 }
 
 /* L'entête de la page (CV) */
